@@ -1,0 +1,16 @@
+﻿Build started 6/2/2015 1:21:22 PM.
+     1>Project "C:\Users\Administrator\Desktop\Projects\CH0\CH0\CH0.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt CH0.cpp
+         CH0.cpp
+     1>c:\users\administrator\desktop\projects\ch0\ch0\ch0.cpp(8): error C3861: 'zero': identifier not found
+     1>c:\users\administrator\desktop\projects\ch0\ch0\ch0.cpp(10): error C3861: 'one': identifier not found
+     1>c:\users\administrator\desktop\projects\ch0\ch0\ch0.cpp(12): error C3861: 'two': identifier not found
+     1>c:\users\administrator\desktop\projects\ch0\ch0\ch0.cpp(14): error C3861: 'three': identifier not found
+     1>c:\users\administrator\desktop\projects\ch0\ch0\ch0.cpp(16): error C3861: 'four': identifier not found
+     1>c:\users\administrator\desktop\projects\ch0\ch0\ch0.cpp(18): error C3861: 'fivetoten': identifier not found
+     1>Done Building Project "C:\Users\Administrator\Desktop\Projects\CH0\CH0\CH0.vcxproj" (Rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.84
