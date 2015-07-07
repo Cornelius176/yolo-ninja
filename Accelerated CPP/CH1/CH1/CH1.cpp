@@ -43,9 +43,16 @@ void part2() {
 	return;
 }
 
+void part3(std::string val) {
+	for (auto c : val)
+		std::cout << c;
+	std::cout << std::endl;
+}
+
 int _tmain(int argc, _TCHAR* argv[]) {
 	part1();
 	part2();
+	part3("trouble");
 	return 0;
 }
 
