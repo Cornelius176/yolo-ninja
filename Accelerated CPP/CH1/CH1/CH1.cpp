@@ -1,44 +1,38 @@
 // CH1.cpp : Defines the entry point for the console application.
 //
-
+#include <boost/algorithm/string.hpp>
 #include "stdafx.h"
 #include <iostream>
 #include <string>
 
+using namespace std;
+
+std::string firstName;
+
 void part1() {
-	std::cout << "Please enter your first name: ";
+	if (firstName.empty()) {
+		std::cout << "Please enter your first name: ";
+		std::cin >> firstName;
+	}
 
-	std::string name;
-	std::cin >> name;
-
-	std::cout << "Hello, " << name << "!" << std::endl;
+	std::cout << "Hello, " << firstName << "!" << std::endl;
 	return; 
 }
 
 void part2() {
-	std::cout << "Please enter your first name: ";
+	if (firstName.empty()) {
+		std::cout << "Please enter your first name: ";
+		std::cin >> firstName;
+	}
+	auto length = firstName.length() + 12;
+	std::string stars(length, '*');
+	std::string spaces(length - 2, ' ');
 
-	std::string name;
-	auto length = 0;
-	std::cin >> name;
-
-	length = name.length() + 12;
-
-	for (auto i = 0; i < length; i++) {
-		std::cout << "*";
-	}
-	std::cout << std::endl << "*";
-	for (auto i = 2; i < length; i++) {
-		std::cout << " ";
-	}
-	std::cout << "*" << std::endl << "* " << "Hello, " << name << "! *" << std::endl << "*";
-	for (auto i = 2; i < length; i++) {
-		std::cout << " ";
-	}
-	std::cout << "*" << std::endl;
-	for (auto i = 0; i < length; i++) {
-		std::cout << "*";
-	}
+	std::cout << stars << std::endl;
+	std::cout << "*" << spaces << "*" << std::endl;
+	std::cout << "* " << "Hello, " << firstName << "! *" << std::endl;
+	std::cout << "*" << spaces << "*" << std::endl;
+	std::cout << stars << std::endl;
 
 	return;
 }
@@ -49,7 +43,7 @@ void part3(std::string val) {
 	std::cout << std::endl;
 }
 
-int _tmain(int argc, _TCHAR* argv[]) {
+int _tmain() {
 	part1();
 	part2();
 	part3("trouble");
