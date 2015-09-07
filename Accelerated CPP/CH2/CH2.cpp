@@ -1,6 +1,7 @@
 #include "pch.h"
 #include <iostream>
 #include <string>
+#include <boost/range/iterator_range.hpp>
 
 using namespace std;
 
@@ -70,17 +71,93 @@ void ex3(const string& greeting)
 	printOut(greeting, xPad, yPad, "*");
 	cout << endl;
 }
-void createSquare(const string& obj, const int& x)
+
+void createSquare(const char& c, const int& x)
 {
+	cout << endl;
 	for (auto i = 0; i < x; ++i) {
-		cout << string(x, '*');
+		cout << string(x, c) << endl;
 	}
+	cout << endl;
 }
 
-void createRectangle(const string& obj, const int& x, const int& y)
+void createRectangle(const char& c, const int& x, const int& y)
 {
+	cout << endl;
 	for (auto i = 0; i < y; ++i) {
-		cout << string(x, '*') << endl;
+		cout << string(x, c) << endl;
+	}
+	cout << endl;
+}
+
+void createTriangle(const char& c, const int& height)
+{
+	cout << endl;
+	for (auto i = 1; i <= height; ++i)
+	{
+		cout << string(height - i, ' ') << string(2*(i)-1, c) << endl;
+	}
+	cout << endl;
+}
+
+void ex5(const char& c, const int& x, const int& y)
+{
+	cout << "Exercise 5: " << endl;
+	createSquare(c, x);
+	createRectangle(c, x, y);
+	createTriangle(c, x);
+	cout << endl;
+}
+
+void ex6()
+{
+	cout << "Exercise 6: " << endl;
+	int i = 0;
+	while (i < 10) {
+		i += 1;
+		std::cout << i << std::endl;
+	}
+	cout << endl << endl;
+}
+
+void ex7()
+{
+	cout << "Exercise 7: " << endl;
+	for (auto i = 10; i > -6; --i)
+		cout << i << " ";
+	cout << endl << endl;
+}
+
+void ex8()
+{
+	cout << "Exercise 8: " << endl;
+	auto product = 1;
+	for (auto i = 1; i < 10; i++)
+		product *= i;
+	cout << product << endl << endl;
+}
+
+void ex9()
+{
+	cout << "Exercise 9: " << endl;
+	int x;
+	int y;
+	cout << " x = ";
+	cin >> x;
+	cout << " y = ";
+	cin >> y;
+
+	if (x > y)
+	{
+		cout << "x is greater than y" << endl << endl;
+	}
+	else if (y > x)
+	{
+		cout << "y is greater than x" << endl << endl;
+	}
+	else
+	{
+		cout << "These are the same damn number Morty!" << endl << endl;
 	}
 }
 
@@ -91,5 +168,11 @@ int main()
 	ex1(greeting);
 	ex2(greeting);
 	ex3(greeting);
+	ex5('*', 3, 2);
+	ex6();
+	ex7();
+	ex8();
+	ex9();
+
 	return 0;
 }
